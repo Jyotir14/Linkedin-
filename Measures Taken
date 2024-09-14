@@ -1,0 +1,15 @@
+Measures
+
+Messages Sent = CALCULATE(COUNTA(messages(FROM)],FILTER(messages,messages[FROM]+"Jyotirmay Jaswal"))
+Messages Received = CALCULATE(COUNT(messages[FROM]),NOT(messages[FROM] IN {"Jyotirmay Jaswal"}))
+Invitation Received = COUNTROWS(FILTER(ALL(Invitations),Invitation[Direction]="Incoming"))
+Invitation Sent = COUNTROWS(FILTER(ALL(Invitations),Invitations[Direction]="outgoing"))
+Total company = DISTINCTCOUNT(Connections[Company])
+Total connection = COUNT(Connections[Connected On])
+Total Reaction = COUNT(Reactions[Type])
+EMPATHY = CALCULATE([Total Reaction],Reactions[Type]="EMPATHY")
+
+Like = CALCULATE([Total Reaction],Reactions[Type]= "LIKE")
+APPRECIATION = CALCULATE([Total Reaction],Reactions[Type]="APPRECIATION")
+ENTERTAINMENT = CALCULATE([Total Reaction],Reactions[Type]="ENTERTAINMENT")
+
