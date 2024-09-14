@@ -30,5 +30,5 @@ Helps in analyzing the total number of distinct companies and connections.
 # Reactions (Like, Empathy, Appreciation, Entertainment): 
 Categorizes different types of reactions received on LinkedIn content.
 # Other Information:
-Contributors : Jyotirmay Jaswal
+Contributor : Jyotirmay Jaswal
 Contact : jyotirmayjaswal258@gmail.com
