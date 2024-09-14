@@ -1,0 +1,18 @@
+Calendar =
+VAR StartDate  = DATE(2019,1,1)
+VAR EndDate = DATE(2024,12,31)
+VAR DateRange = CALENDAR(StartDate, EndDate)
+RETURN
+
+  ADDCOLUMNS(
+    DateRange,
+    "Year",YEAR([Date]),
+    "MonthNumber",MONTH([Date]),
+    "MonthName",FORMAT([Date],"MMMM"),
+    "YearMonthNumber",YEAR([Date])*12 + MONTH([Date]) - 1,
+    "YearMonth",FORMAT([Date],"MMMyy"),
+    "WeekNumber",WEEKNUM([Date]),
+    "WeekNumberAndYear","W" & WEEKNUM([Date])&""& YEAR([Date]),
+    "WeekYearNumber",YEAR([Date])*100 + WEEKNUM([Date]),
+    "IsWorkingDay", NOT WEEKDAY([Date])IN(1,7)
+)
